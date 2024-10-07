@@ -1,0 +1,199 @@
+:root{
+    --tono: 330;
+    --complemento: 190;
+
+    --color-primario: hsla(var(--tono), 100%, 50%, 1);
+    --color-primario-medio: hsla(var(--tono), 100%, 75%, 1);
+    --color-primario-claro: hsla(var(--tono), 100%, 95%, 1);
+    --color-primario-oscuro: hsla(var(--tono), 100%, 15%, 1);
+    --color-primario-oscuro-medio: hsla(var(--tono), 100%, 25%, 1);
+
+    --color-complemento: hsla(var(--complemento), 100%, 30%, 1);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    background: #c986ff;
+    color: #ffffff;
+    font-family: sans-serif;
+    
+}
+
+
+.card{
+    display: flex;
+    align-items: center;
+    width: 75vw;
+    max-width: 650px;
+    padding: 50px;
+    background: #8800c7;
+    border-radius: 25px;
+    box-shadow: 0 4px 10px rgba(18, 0, 20, 0.2); /* Sombra */
+    animation: flotar 3s ease-in-out infinite;
+}
+
+.card img{
+    max-width: 280px;
+    width: 20px;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+    margin-left: -20px;
+    margin-right: 40px;
+    border-radius: inherit;
+    box-shadow: 0 60px 40px rgba(0, 0, 0, 5%);
+    transition: all .5s;
+}
+
+.cajita h2{
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.cajita h3{
+    font-size: 22px;
+    font-weight: 400;
+    opacity: 0.75;
+}
+
+.cajita p{
+    font-size: 14px;
+    font-weight: 200;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    opacity: 0.5;
+    max-width: 360px;
+
+}
+
+.botones{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 50px;
+    border: 3px solid #fdfdfd;
+    border-radius: 40px;
+    background: transparent;
+    color: #46004d;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 3px;
+    cursor: pointer;
+    transition: all 0.5s;
+    
+}
+
+.cajitas {
+    display: grid;
+    grid-template-columns: auto;
+    gap: 10px;
+}
+
+
+.cajitacajita1 {
+    width: 100%;
+    height: 50px;
+    background-color: var(--color-cajitas);
+    box-sizing: border-box;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center; /* Centra el texto horizontalmente */
+    align-items: center; /* Centra el texto verticalmente */
+    text-decoration: none; /* Sin subrayado en el texto */
+    color: white; /* Color del texto */
+    font-weight: bold; /* Texto en negrita */
+    transition: background-color 0.3s; /* Efecto de transición */
+}
+
+
+.cajitacajita2 {
+    width: 100%;
+    height: 50px;
+    background-color: var(--color-cajitas);
+    box-sizing: border-box;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center; /* Centra el texto horizontalmente */
+    align-items: center; /* Centra el texto verticalmente */
+    text-decoration: none; /* Sin subrayado en el texto */
+    color: white; /* Color del texto */
+    font-weight: bold; /* Texto en negrita */
+    transition: background-color 0.3s; /* Efecto de transición */
+}
+
+
+.cajitacajita3 {
+    width: 100%;
+    height: 50px;
+    background-color: var(--color-cajitas);
+    box-sizing: border-box;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center; /* Centra el texto horizontalmente */
+    align-items: center; /* Centra el texto verticalmente */
+    text-decoration: none; /* Sin subrayado en el texto */
+    color: white; /* Color del texto */
+    font-weight: bold; /* Texto en negrita */
+    transition: background-color 0.3s; /* Efecto de transición */
+}
+
+
+.botones{
+    margin: 10px; 
+}
+
+
+.botones:hover{
+    background: #b60808;
+    color: #a31131;
+    font-size: 20px;
+}
+
+
+
+
+@media (max-width:764px) {
+    .card{
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .card img{
+        margin: -20px 0 30px 0;
+        width: 100%;
+        max-width: 1000px;
+    }
+
+    .card button{
+        width: 100%;
+    }
+}
+
+@media (max-width:1024px) {
+    .card img{
+        height: 45vw;
+        width: 45vw;
+        border-radius: 10%;
+    }
+}
+
+@keyframes flotar {
+    0% {
+        transform: translateY(0); /* Posición inicial */
+    }
+    50% {
+        transform: translateY(-10px); /* Eleva la tarjeta */
+    }
+    100% {
+        transform: translateY(0); /* Regresa a la posición inicial */
+    }
+}
